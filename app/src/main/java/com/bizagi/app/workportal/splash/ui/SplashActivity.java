@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 
 import com.bizagi.app.workportal.App;
 import com.bizagi.app.workportal.R;
-import com.bizagi.app.workportal.inbox.InboxActivity;
+import com.bizagi.app.workportal.inbox.ui.InboxActivity;
 import com.bizagi.app.workportal.splash.SplashPresenter;
 import com.bizagi.app.workportal.splash.di.SplashComponent;
 

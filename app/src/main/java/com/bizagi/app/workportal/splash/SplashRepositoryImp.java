@@ -35,7 +35,7 @@ public class SplashRepositoryImp implements SplashRepository {
 
             @Override
             public void onResponse(Call<RequestVacationResponse> call, Response<RequestVacationResponse> response) {
-                Log.d("****","Response");
+                Log.d("****","Response" + response.body() );
                 if (response.isSuccessful()){
                     RequestVacationResponse getResponse = response.body();
                     if (getResponse.getVacationList().size() == 0 ){

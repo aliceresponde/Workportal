@@ -2,6 +2,12 @@ package com.bizagi.app.workportal;
 
 import android.app.Application;
 
+import com.bizagi.app.workportal.inbox.di.DaggerInboxComponent;
+import com.bizagi.app.workportal.inbox.di.InboxComponent;
+import com.bizagi.app.workportal.inbox.di.InboxModules;
+import com.bizagi.app.workportal.inbox.ui.InboxActivity;
+import com.bizagi.app.workportal.inbox.ui.InboxView;
+import com.bizagi.app.workportal.inbox.ui.adapters.OnItemClickListener;
 import com.bizagi.app.workportal.libs.di.LibsModule;
 import com.bizagi.app.workportal.splash.di.DaggerSplashComponent;
 import com.bizagi.app.workportal.splash.di.SplashComponent;
@@ -50,6 +56,14 @@ public class App extends Application {
                 .builder()
                 .libsModule(new LibsModule(activity))
                 .splashModule(new SplashModule(view))
+                .build();
+    }
+
+    public InboxComponent getInboxComponente(InboxActivity activity, InboxView view, OnItemClickListener clickListener){
+        return DaggerInboxComponent
+                .builder()
+                .inboxModules(new InboxModules(view,activity, clickListener))
+                .libsModule(new LibsModule(activity))
                 .build();
     }
 }

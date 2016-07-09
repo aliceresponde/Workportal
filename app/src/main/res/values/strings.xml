@@ -6,5 +6,17 @@
 
     <string name="splash_api_error_message">No data on API server</string>
     <string name="splash_api_success_message">Success</string>
+    <string name="inbox_error_message_no_request">Inbox data is empty</string>
+    <string name="requestVacation_employee_name">Requester\'s name</string>
+    <string name="request_vacation_fromDate">Begin date</string>
+    <string name="request_vacation_toDate">End date</string>
+    <string name="request_vacation_days_amount">Requested days :</string>
+    <string name="request_vacations_title_lastVacationOn">Last vacation on:</string>
+    <string name="update_request_btn_accept">Accept</string>
+    <string name="update_request_btn_reject">Reject</string>
+    <string name="btn_send">Send</string>
+    <string name="day_s">day\'s</string>
+    <string name="hint_requested_days">Requested days</string>
+
 
 </resources>
