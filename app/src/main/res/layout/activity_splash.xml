@@ -7,10 +7,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".splash.SplashActivity">
+    android:id="@+id/cordinator"
+    android:background="@android:color/darker_gray"
+    tools:context=".splash.ui.SplashActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:src="@drawable/engine_logo"
+        android:layout_centerInParent="true"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageV"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/processBar_margin_top"
+        />
 </RelativeLayout>

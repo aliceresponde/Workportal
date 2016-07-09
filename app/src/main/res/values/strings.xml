@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Workportal</string>
+
+    <string name="inbox.title">Inbox</string>
+    <string name="inbox.menu.action.request">Request Vactions</string>
+
+    <string name="splash_api_error_message">No data on API server</string>
+    <string name="splash_api_success_message">Success</string>
+
 </resources>
