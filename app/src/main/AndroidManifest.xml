@@ -12,7 +12,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".splash.ui.SplashActivity">
+        <activity android:name=".splash.ui.SplashActivity"
+            android:noHistory="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +30,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".vacation_request.VacationRequestActivity" />
+        <activity android:name=".vacation_request.ui.VacationRequestActivity" />
         <activity android:name=".vacation_update.UpdateVacationRequestActivity"></activity>
     </application>
 

@@ -14,6 +14,11 @@ import com.bizagi.app.workportal.splash.di.SplashComponent;
 import com.bizagi.app.workportal.splash.di.SplashModule;
 import com.bizagi.app.workportal.splash.ui.SplashActivity;
 import com.bizagi.app.workportal.splash.ui.SplashView;
+import com.bizagi.app.workportal.vacation_request.di.DaggerVacationRequestComponent;
+import com.bizagi.app.workportal.vacation_request.di.VacationRequestComponent;
+import com.bizagi.app.workportal.vacation_request.di.VacationRequestModule;
+import com.bizagi.app.workportal.vacation_request.ui.VacationRequestActivity;
+import com.bizagi.app.workportal.vacation_request.ui.VacationRequestView;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 /**
@@ -64,6 +69,14 @@ public class App extends Application {
                 .builder()
                 .inboxModules(new InboxModules(view,activity, clickListener))
                 .libsModule(new LibsModule(activity))
+                .build();
+    }
+
+    public VacationRequestComponent getRequestVacationComponet(VacationRequestActivity activity, VacationRequestView view) {
+        return DaggerVacationRequestComponent
+                .builder()
+                .libsModule( new LibsModule(activity))
+                .vacationRequestModule(new VacationRequestModule(view))
                 .build();
     }
 }

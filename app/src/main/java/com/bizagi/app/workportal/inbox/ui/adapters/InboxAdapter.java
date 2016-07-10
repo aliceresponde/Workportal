@@ -68,7 +68,7 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.ViewHolder> 
 
             holder.txtApproved.setBackgroundColor( context.getResources().getColor(android.R.color.holo_orange_dark));
         }else {
-
+            holder.txtApproved.setText("Pending");
             holder.txtApproved.setBackgroundColor( context.getResources().getColor(android.R.color.darker_gray));
         }
 
@@ -87,6 +87,11 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.ViewHolder> 
     @Override
     public int getItemCount() {
         return vacationList.size();
+    }
+
+    public void addVaction(Vacation nVacation) {
+        vacationList.add(nVacation);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -8,11 +8,18 @@ android {
 
     defaultConfig {
         applicationId "com.bizagi.app.workportal"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 16
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+
     }
+
+    dexOptions {
+        incremental true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -48,4 +55,5 @@ dependencies {
     compile "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
 
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+
 }

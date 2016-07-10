@@ -39,10 +39,10 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
         ButterKnife.bind(this);
         setupInjection();
         wasDataLoaded = sharedPreferences.getBoolean(app.SP_WASLOADED, false);
+        Log.d("================",wasDataLoaded +" wasDataLoaded" );
 
         presenter.onCreate();
         if (!wasDataLoaded) {
-            Log.d("****", "no data");
             presenter.getData();
         }else {
             navigationToInboxScreen();
@@ -66,6 +66,7 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
     @Override
     public void downloadDataSuccess() {
         hideProgress();
+        sharedPreferences.edit().putBoolean(App.SP_WASLOADED, true).commit();
         Snackbar.make(cordinator, getString(R.string.splash_api_success_message) , Snackbar.LENGTH_SHORT).show();
         navigationToInboxScreen();
     }

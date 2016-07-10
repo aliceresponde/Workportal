@@ -30,7 +30,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/beginDate"
+                android:id="@+id/inputBeginDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -38,7 +38,7 @@
                 android:hint="@string/request_vacation_fromDate"></EditText>
 
             <EditText
-                android:id="@+id/endDate"
+                android:id="@+id/inputEndDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -62,7 +62,7 @@
                 android:textAppearance="?attr/textAppearanceListItem" />
 
             <TextView
-                android:id="@+id/txtRequestedDays"
+                android:id="@+id/inputRequestedDays"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"

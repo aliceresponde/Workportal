@@ -7,6 +7,8 @@ import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 
+import java.io.Serializable;
+
 /**
  * Created by alice on 7/8/16.
  * ============================================================================
@@ -25,10 +27,16 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
  * ============================================================================
  */
 @Table(database = WorkPortalDataBase.class)
-public class Vacation extends BaseModel {
+public class Vacation extends BaseModel implements Serializable{
 
     public static final String STATUS_ACCEPTED = "accepted ";
     public static final String STATUS_REJECTED = "rejected ";
+    public static final String K_ACTIVITY = "Approval ";
+    public static final String K_PROCESS_ID = "1";
+    public static final String K_PROCESS = "Vacations";
+    public static final String K_LAST_VACATION_ON = "2015-12-20";
+
+
     public static final String STATUS_NONE = "";
 
     @SerializedName("activityId")
@@ -56,20 +64,15 @@ public class Vacation extends BaseModel {
     private String beginDate;
 
 
+    @SerializedName("requestDate")
+    private String requestDate;
+
     @SerializedName("requestedDays")
     private String requestedDays;
 
     @SerializedName("endDate")
     @Column
     private String endDate;
-
-    public String getRequestedDays() {
-        return requestedDays;
-    }
-
-    public void setRequestedDays(String requestedDays) {
-        this.requestedDays = requestedDays;
-    }
 
     @SerializedName("lastVacationOn")
     @Column
@@ -78,6 +81,22 @@ public class Vacation extends BaseModel {
     @SerializedName("approved")
     @Column
     private String approved;
+
+    public String getRequestedDays() {
+        return requestedDays;
+    }
+
+    public String getRequestDate() {
+        return requestDate;
+    }
+
+    public void setRequestDate(String requestDate) {
+        this.requestDate = requestDate;
+    }
+
+    public void setRequestedDays(String requestedDays) {
+        this.requestedDays = requestedDays;
+    }
 
     public String getActivityId() {
         return activityId;
