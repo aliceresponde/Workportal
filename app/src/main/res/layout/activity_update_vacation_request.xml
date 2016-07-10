@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/cordinator"
     tools:context="com.bizagi.app.workportal.vacation_update.UpdateVacationRequestActivity">
 
     <LinearLayout
@@ -21,6 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:enabled="false"
                 android:hint="@string/requestVacation_employee_name" />
         </android.support.design.widget.TextInputLayout>
 
@@ -35,6 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight=".5"
+                android:enabled="false"
+
                 android:hint="@string/request_vacation_fromDate"></EditText>
 
             <EditText
@@ -44,6 +48,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight=".5"
                 android:gravity="right"
+                android:enabled="false"
+
                 android:hint="@string/request_vacation_toDate"></EditText>
         </LinearLayout>
 
@@ -70,7 +76,7 @@
                 android:text="5"
 
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:textColor="@android:color/holo_green_dark" />
+                android:textColor="@color/colorPrimary" />
 
 
         </LinearLayout>
@@ -94,6 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="2/2/2016"
+                android:gravity="right"
+                android:textColor="@color/colorPrimary"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>
 

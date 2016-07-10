@@ -19,6 +19,7 @@ import com.bizagi.app.workportal.inbox.di.InboxComponent;
 import com.bizagi.app.workportal.inbox.ui.adapters.InboxAdapter;
 import com.bizagi.app.workportal.inbox.ui.adapters.OnItemClickListener;
 import com.bizagi.app.workportal.vacation_request.ui.VacationRequestActivity;
+import com.bizagi.app.workportal.vacation_update.UpdateVacationRequestActivity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -44,6 +45,7 @@ public class InboxActivity extends AppCompatActivity implements InboxView, OnIte
     private static final String BEGIN_DATE = "beginDate";
     private static final String END_DATE = "endDate";
     public static final String EXTRA_K_NEW_VACATION = "new_vacation";
+    public static final String EXTRA_K_CURRENT_VACATION = "current_vacation";
 
     public static final String TOTAL_REQUEST = "totalRequest";
 
@@ -85,12 +87,7 @@ public class InboxActivity extends AppCompatActivity implements InboxView, OnIte
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == REQUEST_VACATION_CREATE && requestCode == RESULT_OK) {
-            Vacation nVacation = (Vacation) data.getExtras().get(EXTRA_K_NEW_VACATION);
-            adapter.addVaction(nVacation);
-        }
+            presenter.getVactionsRequest();
     }
 
     //    ==================================View==========================================
@@ -128,8 +125,8 @@ public class InboxActivity extends AppCompatActivity implements InboxView, OnIte
     }
 
     private void navegateToUpdateVacationRequest(Vacation vacationRequest) {
-        Intent intent = new Intent(this, VacationRequestActivity.class);
-        intent.putExtra("request", (Serializable) vacationRequest);
+        Intent intent = new Intent(this, UpdateVacationRequestActivity.class);
+        intent.putExtra(EXTRA_K_CURRENT_VACATION, (Serializable) vacationRequest);
         startActivityForResult(intent, REQUEST_VACATION_UPDATE);
     }
 

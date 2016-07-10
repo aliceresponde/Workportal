@@ -115,6 +115,7 @@ public class VacationRequestActivity extends AppCompatActivity implements Vacati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation_request);
         ButterKnife.bind(this);
+        setTitle("Request Vacation");
 
         Calendar cal = Calendar.getInstance();
         year_x = cal.get(Calendar.YEAR);

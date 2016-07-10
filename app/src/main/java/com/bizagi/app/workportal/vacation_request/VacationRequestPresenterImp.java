@@ -1,7 +1,5 @@
 package com.bizagi.app.workportal.vacation_request;
 
-import android.util.Log;
-
 import com.bizagi.app.workportal.vacation_request.events.VacationRequestEvent;
 import com.bizagi.app.workportal.vacation_request.ui.VacationRequestView;
 
@@ -37,7 +35,6 @@ public class VacationRequestPresenterImp implements  VacationRequestPresenter {
     @Subscribe
     @Override
     public void onEvnetMainThread(VacationRequestEvent event) {
-        Log.d("Add*************","onEvnetMainThread");
         view.hideProgress();
         view.hideProgress();
         view.cleanForm();

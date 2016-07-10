@@ -57,6 +57,7 @@ public class App extends Application {
 
 
     public SplashComponent getSplashComponent(SplashActivity activity, SplashView view){
+
         return DaggerSplashComponent
                 .builder()
                 .libsModule(new LibsModule(activity))

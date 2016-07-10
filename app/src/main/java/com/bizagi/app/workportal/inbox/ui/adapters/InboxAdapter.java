@@ -65,7 +65,6 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.ViewHolder> 
         if (status.equalsIgnoreCase(Vacation.STATUS_ACCEPTED)){
             holder.txtApproved.setBackgroundColor( context.getResources().getColor(android.R.color.holo_blue_light));
         }else if(status.equalsIgnoreCase(Vacation.STATUS_REJECTED)){
-
             holder.txtApproved.setBackgroundColor( context.getResources().getColor(android.R.color.holo_orange_dark));
         }else {
             holder.txtApproved.setText("Pending");
