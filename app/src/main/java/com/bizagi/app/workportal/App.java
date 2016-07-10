@@ -20,6 +20,8 @@ import com.bizagi.app.workportal.vacation_request.di.VacationRequestModule;
 import com.bizagi.app.workportal.vacation_request.ui.VacationRequestActivity;
 import com.bizagi.app.workportal.vacation_request.ui.VacationRequestView;
 import com.raizlabs.android.dbflow.config.FlowManager;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by alice on 7/8/16.
@@ -30,6 +32,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         initDB();
     }
 

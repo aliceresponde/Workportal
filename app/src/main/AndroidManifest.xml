@@ -32,6 +32,9 @@
 
         <activity android:name=".vacation_request.ui.VacationRequestActivity" />
         <activity android:name=".vacation_update.UpdateVacationRequestActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="45bd278880ab054320fca375cd4fb7fe1012c540" />
     </application>
 
 </manifest>
