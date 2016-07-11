@@ -82,5 +82,6 @@ public class App extends Application {
                 .libsModule( new LibsModule(activity))
                 .vacationRequestModule(new VacationRequestModule(view))
                 .build();
+
     }
 }
