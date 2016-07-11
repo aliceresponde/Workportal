@@ -1,6 +1,6 @@
 package com.bizagi.app.workportal.db.entities;
 
-import com.bizagi.app.workportal.db.WorkPortalDataBase2;
+import com.bizagi.app.workportal.db.WorkPortalDataBase;
 import com.google.gson.annotations.SerializedName;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
@@ -26,7 +26,7 @@ import java.io.Serializable;
  * }
  * ============================================================================
  */
-@Table(database = WorkPortalDataBase2.class)
+@Table(database = WorkPortalDataBase.class)
 public class Vacation extends BaseModel implements Serializable{
 
     public static final String STATUS_ACCEPTED = "accepted ";
